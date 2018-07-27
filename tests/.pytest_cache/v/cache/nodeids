@@ -1,0 +1,7 @@
+[
+  "suite.py::ClearTodoTest::test_cancel_clear_todos",
+  "suite.py::ClearTodoTest::test_clear_todos",
+  "suite.py::CreateTodoTest::test_add_contacts",
+  "suite.py::ModifyTodoTest::test_cancel_modify_todo",
+  "suite.py::ModifyTodoTest::test_modify_todo"
+]

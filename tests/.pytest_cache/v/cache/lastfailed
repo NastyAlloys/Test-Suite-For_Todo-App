@@ -1,0 +1,5 @@
+{
+  "suite.py::ClearTodoTest": true,
+  "suite.py::CreateTodoTest": true,
+  "suite.py::ModifyTodoTest": true
+}
