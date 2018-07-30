@@ -42,20 +42,23 @@ class ClearTodoTest(unittest.TestCase):
         
     def test_cancel_clear_todos(self):
         self.driver.implicitly_wait(10)
-
+        isEmptyBefore = False
         try:
             self.driver.find_element_by_id("fr.stevenfrancony.mytodolist:id/list")
         except NoSuchElementException:
-            return
+            isEmptyBefore = True
 
         self.driver.find_element_by_id("fr.stevenfrancony.mytodolist:id/clearButton").click()
         self.driver.find_element_by_id("android:id/button2").click()
 
         self.driver.implicitly_wait(3)
-
+        isEmptyAfter = False
         try:
             self.driver.find_element_by_id("fr.stevenfrancony.mytodolist:id/list")
         except NoSuchElementException:
+            isEmptyAfter = True
+
+        if isEmptyBefore != isEmptyAfter:
             pytest.fail('List should be present')
 
 if __name__ == '__main__':
